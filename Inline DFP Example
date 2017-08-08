@@ -1,0 +1,20 @@
+<script src="http://cdn.millennialmedia.com/mmadlib/v1/mmadlib.js"></script>
+
+<div id="adContainer"></div>
+
+<script type="text/javascript">
+
+    function passBack(adFilled) {
+          //adFilled will be true if the ad fills, else it will be false
+          console.log("was the ad filled: " + adFilled);
+    };
+
+    window.mmAPI.placeAd({
+        containerElementId: "adContainer",
+        apid: "123456",
+        placementType: "inline",
+        width: 320,
+        height: 50
+    }, passBack);
+
+</script>
